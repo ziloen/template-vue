@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
     "rootDir": "./",
     "module": "ESNext",
     "target": "ES2022",
@@ -89,7 +88,7 @@
     ],
     "paths": {
       "~/*": [
-        "src/*"
+        "./src/*"
       ],
       "~cwd/*": [
         "./*"
