@@ -6,40 +6,40 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-  const computed: typeof import('vue')['computed']
-  const customRef: typeof import('vue')['customRef']
-  const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
-  const defineComponent: typeof import('vue')['defineComponent']
-  const effectScope: typeof import('vue')['effectScope']
-  const inject: typeof import('vue')['inject']
-  const nextTick: typeof import('vue')['nextTick']
-  const onBeforeMount: typeof import('vue')['onBeforeMount']
-  const onBeforeUnmount: typeof import('vue')['onBeforeUnmount']
-  const onBeforeUpdate: typeof import('vue')['onBeforeUpdate']
-  const onMounted: typeof import('vue')['onMounted']
-  const onScopeDispose: typeof import('vue')['onScopeDispose']
-  const onUnmounted: typeof import('vue')['onUnmounted']
-  const onUpdated: typeof import('vue')['onUpdated']
-  const provide: typeof import('vue')['provide']
-  const reactive: typeof import('vue')['reactive']
-  const readonly: typeof import('vue')['readonly']
-  const ref: typeof import('vue')['ref']
-  const shallowReactive: typeof import('vue')['shallowReactive']
-  const shallowReadonly: typeof import('vue')['shallowReadonly']
-  const shallowRef: typeof import('vue')['shallowRef']
-  const toRaw: typeof import('vue')['toRaw']
-  const unref: typeof import('vue')['unref']
-  const unrefElement: typeof import('@vueuse/core')['unrefElement']
-  const useCssModule: typeof import('vue')['useCssModule']
-  const useCssVars: typeof import('vue')['useCssVars']
-  const useId: typeof import('vue')['useId']
-  const useRoute: typeof import('vue-router')['useRoute']
-  const useRouter: typeof import('vue-router')['useRouter']
-  const useVModel: typeof import('@vueuse/core')['useVModel']
-  const watch: typeof import('vue')['watch']
-  const watchEffect: typeof import('vue')['watchEffect']
-  const watchPostEffect: typeof import('vue')['watchPostEffect']
-  const watchSyncEffect: typeof import('vue')['watchSyncEffect']
+  const computed: typeof import('vue').computed
+  const customRef: typeof import('vue').customRef
+  const defineAsyncComponent: typeof import('vue').defineAsyncComponent
+  const defineComponent: typeof import('vue').defineComponent
+  const effectScope: typeof import('vue').effectScope
+  const inject: typeof import('vue').inject
+  const nextTick: typeof import('vue').nextTick
+  const onBeforeMount: typeof import('vue').onBeforeMount
+  const onBeforeUnmount: typeof import('vue').onBeforeUnmount
+  const onBeforeUpdate: typeof import('vue').onBeforeUpdate
+  const onMounted: typeof import('vue').onMounted
+  const onScopeDispose: typeof import('vue').onScopeDispose
+  const onUnmounted: typeof import('vue').onUnmounted
+  const onUpdated: typeof import('vue').onUpdated
+  const provide: typeof import('vue').provide
+  const reactive: typeof import('vue').reactive
+  const readonly: typeof import('vue').readonly
+  const ref: typeof import('vue').ref
+  const shallowReactive: typeof import('vue').shallowReactive
+  const shallowReadonly: typeof import('vue').shallowReadonly
+  const shallowRef: typeof import('vue').shallowRef
+  const toRaw: typeof import('vue').toRaw
+  const unref: typeof import('vue').unref
+  const unrefElement: typeof import('@vueuse/core').unrefElement
+  const useCssModule: typeof import('vue').useCssModule
+  const useCssVars: typeof import('vue').useCssVars
+  const useId: typeof import('vue').useId
+  const useRoute: typeof import('vue-router').useRoute
+  const useRouter: typeof import('vue-router').useRouter
+  const useVModel: typeof import('@vueuse/core').useVModel
+  const watch: typeof import('vue').watch
+  const watchEffect: typeof import('vue').watchEffect
+  const watchPostEffect: typeof import('vue').watchPostEffect
+  const watchSyncEffect: typeof import('vue').watchSyncEffect
 }
 
 // for vue template auto import
