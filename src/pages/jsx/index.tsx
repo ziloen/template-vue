@@ -19,27 +19,30 @@ const JsxExample1 = defineComponent<Props>({
     })
 
     return () => {
-      return <div ref={el} class="flex-align flex-col gap-2">
-        <div>{counter.value}</div>
-        <div>
-          <button class="btn" onClick={() => counter.value++}>+1</button>
-        </div>
-        <div>
-          <button type='button' class="btn" onClick={() => show.value = !show.value}>Toggle</button>
-        </div>
-        <div v-show={show.value}>v-show test</div>
-        {show.value ? <div>JSX condition render</div> : null}
+      return (
+        <div ref={el} class="flex-align flex-col gap-2">
+          <div>{counter.value}</div>
+          <div>
+            <button class="btn" onClick={() => counter.value++}>
+              +1
+            </button>
+          </div>
+          <div>
+            <button type="button" class="btn" onClick={() => (show.value = !show.value)}>
+              Toggle
+            </button>
+          </div>
+          <div v-show={show.value}>v-show test</div>
+          {show.value ? <div>JSX condition render</div> : null}
 
-        <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
-      </div>
+          <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
+        </div>
+      )
     }
-  }
+  },
 })
 
-const JsxExample2 = defineComponent((
-  props: Props,
-  { emit, expose, slots, attrs }
-) => {
+const JsxExample2 = defineComponent((props: Props, { emit, expose, slots, attrs }) => {
   const counter = ref(0)
   const inputVal = ref('test')
   const show = ref(false)
@@ -64,10 +67,14 @@ const JsxExample2 = defineComponent((
       <div>{counter.value}</div>
       <input class="text-black" type="text" v-model={inputVal.value} />
       <div>
-        <button class="btn" onClick={() => counter.value++}>+1</button>
+        <button class="btn" onClick={() => counter.value++}>
+          +1
+        </button>
       </div>
       <div>
-        <button type='button' class="btn" onClick={() => show.value = !show.value}>Toggle</button>
+        <button type="button" class="btn" onClick={() => (show.value = !show.value)}>
+          Toggle
+        </button>
       </div>
       <div v-show={show.value}>v-show test</div>
       {show.value ? <div>JSX condition render</div> : null}

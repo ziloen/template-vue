@@ -1,5 +1,6 @@
-import { useTranslation } from 'i18next-vue'
 import type { VNode } from 'vue'
+
+import { useTranslation } from 'i18next-vue'
 import { Fragment, cloneVNode, createVNode, h, isVNode } from 'vue'
 
 /**
@@ -7,8 +8,8 @@ import { Fragment, cloneVNode, createVNode, h, isVNode } from 'vue'
  * @example
  * ```tsx
  * const { t } = useI18n()
- * 
- * const hello = t("hello", { 
+ *
+ * const hello = t("hello", {
  *   bold: text => <span class="font-bold">{text}</span>,
  *   blue: <span class="text-blue" />,
  *   name: "John"
@@ -19,10 +20,14 @@ export function useI18n() {
   const { t, i18next } = useTranslation()
 
   function tFunc(key: string): string
-  function tFunc(key: string,
-    data: Record<string, ((text: string) => VNode) | VNode | JSX.Element | string>
+  function tFunc(
+    key: string,
+    data: Record<string, ((text: string) => VNode) | VNode | JSX.Element | string>,
   ): VNode
-  function tFunc(key: string, data?: Record<string, ((text: string) => VNode) | VNode | JSX.Element | string>) {
+  function tFunc(
+    key: string,
+    data?: Record<string, ((text: string) => VNode) | VNode | JSX.Element | string>,
+  ) {
     if (!data) return t(key)
 
     // text => <span class="text-blue">{text}</span>
@@ -90,10 +95,9 @@ export function useI18n() {
 
   return {
     t: tFunc,
-    i18next
+    i18next,
   }
 }
-
 
 /**
  * Get rendered content

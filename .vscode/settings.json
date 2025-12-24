@@ -1,9 +1,18 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
   // add @apply & @container to css atDirectives
   "css.customData": [
@@ -11,7 +20,7 @@
   ],
   "editor.codeActionsOnSave": [
     // only sort imports
-    "source.sortImports",
+    // "source.sortImports",
     // remove unused imports & sort imports
     // "source.organizeImports",
     // "source.fixAll.eslint",
