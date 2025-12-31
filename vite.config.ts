@@ -64,6 +64,7 @@ export default defineConfig(({ command }) => {
           vueJsx: vueJsx({
             optimize: true,
             transformOn: true,
+            tsTransform: 'built-in',
           }),
 
           // https://github.com/posva/unplugin-vue-router

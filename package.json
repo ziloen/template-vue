@@ -9,7 +9,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@unhead/vue": "2.0.19",
+    "@unhead/vue": "2.1.1",
     "@vueuse/core": "14.1.0",
     "@vueuse/rxjs": "14.1.0",
     "@wai-ri/core": "0.0.108",
@@ -25,7 +25,7 @@
     "rxjs": "7.8.2",
     "vue": "3.6.0-beta.1",
     "vue-router": "4.6.4",
-    "zod": "4.2.1"
+    "zod": "4.3.2"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.1.18",
@@ -37,9 +37,9 @@
     "@ziloen/tailwind-config": "2.0.15",
     "cross-env": "10.1.0",
     "eslint": "9.39.2",
-    "jsdom": "27.3.0",
+    "jsdom": "27.4.0",
     "lightningcss": "1.30.2",
-    "oxfmt": "0.20.0",
+    "oxfmt": "0.21.0",
     "tailwindcss": "4.1.18",
     "ts-lib-enhance": "1.0.22",
     "type-fest": "5.3.1",
@@ -49,8 +49,8 @@
     "unplugin-svg-component": "0.12.4",
     "unplugin-vue-components": "30.0.0",
     "unplugin-vue-macros": "2.14.5",
-    "unplugin-vue-router": "0.19.1",
-    "vite": "8.0.0-beta.4",
+    "unplugin-vue-router": "0.19.2",
+    "vite": "8.0.0-beta.5",
     "vitest": "4.0.16",
     "vue-tsc": "3.2.1"
   },

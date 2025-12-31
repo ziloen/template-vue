@@ -18,27 +18,25 @@ const JsxExample1 = defineComponent<Props>({
       console.log('element ref', el.value)
     })
 
-    return () => {
-      return (
-        <div ref={el} class="flex-align flex-col gap-2">
-          <div>{counter.value}</div>
-          <div>
-            <button class="btn" onClick={() => counter.value++}>
-              +1
-            </button>
-          </div>
-          <div>
-            <button type="button" class="btn" onClick={() => (show.value = !show.value)}>
-              Toggle
-            </button>
-          </div>
-          <div v-show={show.value}>v-show test</div>
-          {show.value ? <div>JSX condition render</div> : null}
-
-          <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
+    return () => (
+      <div ref={el} class="flex-align flex-col gap-2">
+        <div>{counter.value}</div>
+        <div>
+          <button class="btn" onClick={() => counter.value++}>
+            +1
+          </button>
         </div>
-      )
-    }
+        <div>
+          <button type="button" class="btn" onClick={() => (show.value = !show.value)}>
+            Toggle
+          </button>
+        </div>
+        <div v-show={show.value}>v-show test</div>
+        {show.value ? <div>JSX condition render</div> : null}
+
+        <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
+      </div>
+    )
   },
 })
 
@@ -63,7 +61,13 @@ const JsxExample2 = defineComponent((props: Props, { emit, expose, slots, attrs 
   })
 
   return () => (
-    <div ref={el} class="flex-align flex-col gap-2">
+    <div
+      ref={el}
+      class={[
+        'flex-align flex-col gap-2',
+        '[&_code]:bg-dark-gray-50 [&_code]:px-0.5 [&_code]:rounded-sm',
+      ]}
+    >
       <div>{counter.value}</div>
       <input class="text-black" type="text" v-model={inputVal.value} />
       <div>
@@ -76,10 +80,14 @@ const JsxExample2 = defineComponent((props: Props, { emit, expose, slots, attrs 
           Toggle
         </button>
       </div>
-      <div v-show={show.value}>v-show test</div>
+      <div v-show={show.value}>
+        <code>v-show</code> test
+      </div>
       {show.value ? <div>JSX condition render</div> : null}
 
-      <p>`v-if` & `v-on/@` & `v-for` is not supported</p>
+      <p>
+        <code>v-if</code> & <code>v-on/@</code> & <code>v-for</code> is not supported
+      </p>
 
       <p>{t('contactUsLink', { link: <span class="text-blue-4" /> })}</p>
       <p>{t('hello', { name: <span class="text-green">Dynamic Name</span> })}</p>
