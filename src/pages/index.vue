@@ -21,10 +21,10 @@ const testMsg = t('useI18nTest', {
     class: 'text-blue',
     href: 'https://vuejs.org',
     target: '_blank',
-    rel: 'noopener noreferrer'
+    rel: 'noopener noreferrer',
   }),
   // name: 'useI18nTest'
-  name: h('span', { class: 'text-green' }, 'Dynamic Name')
+  name: h('span', { class: 'text-green' }, 'Dynamic Name'),
 })
 </script>
 

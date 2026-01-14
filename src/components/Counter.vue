@@ -23,7 +23,13 @@ const { count, inc, dec } = useCounter(props.initial)
     <div class="flex-center flex-col">
       <span>counterStore: {{ counterStore.count }}</span>
       <div class="flex gap-2">
-        <button class="btn" :disabled="counterStore.count <= 0" @click="counterStore.decrement(Math.random())">-</button>
+        <button
+          class="btn"
+          :disabled="counterStore.count <= 0"
+          @click="counterStore.decrement(Math.random())"
+        >
+          -
+        </button>
         <button class="btn" @click="counterStore.increment(Math.random())">+</button>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
 
-
 export const useCounterStore = defineStore('counter', () => {
   /** 计数器 */
   const count = ref(0)

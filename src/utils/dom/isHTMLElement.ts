@@ -22,13 +22,15 @@ export function isHTMLElement<ConstructorName extends HTMLElementConstructorName
      * Like `HTMLInputElement` for example.
      */
     constructorName?: ConstructorName
-  }
-): element is InstanceType<(typeof globalThis)[[ConstructorName] extends [never] ? 'HTMLElement' : ConstructorName]> {
+  },
+): element is InstanceType<
+  (typeof globalThis)[[ConstructorName] extends [never] ? 'HTMLElement' : ConstructorName]
+> {
   const typedElement = element as Node | null | undefined
   return Boolean(
     typedElement?.ownerDocument?.defaultView &&
     typedElement instanceof
-    typedElement.ownerDocument.defaultView[options?.constructorName ?? 'HTMLElement']
+      typedElement.ownerDocument.defaultView[options?.constructorName ?? 'HTMLElement'],
   )
 }
 

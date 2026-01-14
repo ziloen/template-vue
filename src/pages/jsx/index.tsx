@@ -65,7 +65,7 @@ const JsxExample2 = defineComponent((props: Props, { emit, expose, slots, attrs 
       ref={el}
       class={[
         'flex-align flex-col gap-2',
-        '[&_code]:bg-dark-gray-50 [&_code]:px-0.5 [&_code]:rounded-sm',
+        '[&_code]:rounded-sm [&_code]:bg-dark-gray-50 [&_code]:px-0.5',
       ]}
     >
       <div>{counter.value}</div>
