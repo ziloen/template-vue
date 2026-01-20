@@ -78,7 +78,6 @@
     "types": [
       "vite/client",
       "unplugin-vue-macros/macros-global",
-      "unplugin-vue-router/client",
       "ts-lib-enhance",
     ],
     "typeRoots": [
@@ -111,9 +110,11 @@
     "jsxSlots": true,
     // "skipTemplateCodegen": false,
     // link class for style block without scoped
-    "experimentalResolveStyleCssClasses": "always",
+    "resolveStyleClassNames": true,
     "plugins": [
-      "@vue-macros/volar/jsx-directive"
+      "@vue-macros/volar/jsx-directive",
+      "vue-router/volar/sfc-route-blocks",
+      "vue-router/volar/sfc-typed-router",
     ]
   },
   "exclude": [

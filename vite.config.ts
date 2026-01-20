@@ -9,8 +9,8 @@ import path from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
-import VueRoute from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
+import VueRouter from 'vue-router/vite'
 
 export default defineConfig(({ command }) => {
   const cwd = process.cwd()
@@ -68,7 +68,7 @@ export default defineConfig(({ command }) => {
           }),
 
           // https://github.com/posva/unplugin-vue-router
-          vueRouter: VueRoute({
+          vueRouter: VueRouter({
             routesFolder: 'src/pages',
             extensions: ['.vue', '.tsx'],
             /** files to exclude from router scan */
