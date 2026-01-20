@@ -76,9 +76,9 @@
       "DOM.Iterable"
     ],
     "types": [
-      "vite/client",
-      "unplugin-vue-macros/macros-global",
       "ts-lib-enhance",
+      "vite/client",
+      "vue-macros/macros-global",
     ],
     "typeRoots": [
       "./node_modules/@types/",
@@ -112,8 +112,8 @@
     // link class for style block without scoped
     "resolveStyleClassNames": true,
     "plugins": [
-      "@vue-macros/volar/jsx-directive",
-      "vue-router/volar/sfc-route-blocks",
+      "vue-macros/volar",
+      // "vue-router/volar/sfc-route-blocks",
       "vue-router/volar/sfc-typed-router",
     ]
   },

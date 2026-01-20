@@ -8,8 +8,8 @@ import { Features } from 'lightningcss'
 import path from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import VueMacros from 'unplugin-vue-macros/vite'
 import { defineConfig } from 'vite'
+import VueMacros from 'vue-macros/vite'
 import VueRouter from 'vue-router/vite'
 
 export default defineConfig(({ command }) => {
