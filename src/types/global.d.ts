@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable no-var */
 // @ts-nocheck
 /**
  * @deprecated

@@ -5,16 +5,12 @@ import legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { Features } from 'lightningcss'
-import path from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import VueMacros from 'vue-macros/vite'
 import VueRouter from 'vue-router/vite'
 
 export default defineConfig(({ command }) => {
-  const cwd = process.cwd()
-
   const IS_DEV = process.env.NODE_ENV === 'development'
   const IS_PROD = !IS_DEV
   const IS_BUILD = command === 'build'
@@ -23,10 +19,7 @@ export default defineConfig(({ command }) => {
 
   return {
     resolve: {
-      alias: {
-        '~': path.resolve('src'),
-        '~cwd': cwd,
-      },
+      tsconfigPaths: true,
     },
 
     define: {
@@ -123,11 +116,6 @@ export default defineConfig(({ command }) => {
         dts: './src/types/auto-imports.d.ts',
         // dirs: ['./src/composables'],
         vueTemplate: true,
-      }),
-
-      // https://github.com/unplugin/unplugin-vue-components
-      Components({
-        dts: './src/types/components.d.ts',
       }),
 
       tailwindcss(),

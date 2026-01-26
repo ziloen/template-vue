@@ -12,6 +12,7 @@
 
 <script setup lang="ts">
 import { h } from 'vue'
+import Counter from '~/components/Counter.vue'
 import { useI18n } from '~/composables'
 
 const { t } = useI18n()
