@@ -1,6 +1,5 @@
-import type { VNode } from 'vue'
-
 import { useTranslation } from 'i18next-vue'
+import type { VNode } from 'vue'
 import { Fragment, cloneVNode, createVNode, h, isVNode } from 'vue'
 
 /**

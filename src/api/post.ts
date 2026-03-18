@@ -1,5 +1,4 @@
 import { z } from 'zod'
-
 import { request } from '~/api'
 
 const postSchema = z.object({

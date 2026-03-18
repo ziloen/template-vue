@@ -4,11 +4,7 @@
   "bracketSameLine": false,
   "bracketSpacing": true,
   "endOfLine": "lf",
-  "experimentalSortImports": {},
-  "experimentalSortPackageJson": false,
-  "experimentalTailwindcss": {
-    "stylesheet": "./src/styles/tailwind.css",
-  },
+  "htmlWhitespaceSensitivity": "css",
   "ignorePatterns": [
     "*.json",
     "*.jsonc",
@@ -16,7 +12,6 @@
     "src/types/components.d.ts",
     "src/types/typed-router.d.ts",
   ],
-  "htmlWhitespaceSensitivity": "css",
   "insertFinalNewline": true,
   "jsxSingleQuote": false,
   "objectWrap": "preserve",
@@ -24,7 +19,44 @@
   "quoteProps": "as-needed",
   "semi": false,
   "singleQuote": true,
+  "sortImports": {
+    "customGroups": [
+      {
+        "elementNamePattern": [
+          "**/*.{png,jpg,jpeg,svg,gif,bmp,webp,mp4,mov,avi,mkv,json}"
+        ],
+        "groupName": "assets"
+      }
+    ],
+    // prettier-plugin-organize-imports compatible configuration
+    "groups": [
+      "side_effect",
+      [
+        "style",
+        "assets"
+      ],
+      [
+        "builtin",
+        "external",
+        "internal"
+      ],
+      {
+        "newlinesBetween": false
+      },
+      [
+        "parent",
+        "sibling",
+        "index"
+      ],
+      "unknown"
+    ],
+    "newlinesBetween": true
+  },
+  "sortPackageJson": false,
+  "sortTailwindcss": {
+    "stylesheet": "./src/styles/tailwind.css"
+  },
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false,
+  "useTabs": false
 }

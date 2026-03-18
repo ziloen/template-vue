@@ -1,7 +1,5 @@
-import type { ZodType } from 'zod'
-
 import axios from 'axios'
-
+import type { ZodType } from 'zod'
 import { message } from '~/utils'
 
 const request = axios.create({

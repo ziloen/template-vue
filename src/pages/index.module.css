@@ -1,6 +1,5 @@
 /* This class name will be changed in css modules */
-.this-will-add-a-hash {
-
+.this-will-change {
   /* add :global to make it preserve the original class name */
   /* https://github.com/css-modules/css-modules/blob/master/docs/composition.md#exceptions */
   :global(.this-will-not-be-changed) {
