@@ -2,6 +2,8 @@ import axios from 'axios'
 import type { ZodType } from 'zod'
 import { message } from '~/utils'
 
+export * as API from './api'
+
 const request = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com',
   timeout: 2_000,

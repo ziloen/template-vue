@@ -54,6 +54,12 @@
   },
   "sortPackageJson": false,
   "sortTailwindcss": {
+    "functions": [
+      "clsx",
+      "cn"
+    ],
+    "preserveDuplicates": false,
+    "preserveWhitespace": false,
     "stylesheet": "./src/styles/tailwind.css"
   },
   "tabWidth": 2,

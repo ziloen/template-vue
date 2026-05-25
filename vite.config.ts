@@ -133,10 +133,15 @@ export default defineConfig(({ command }) => {
     build: {
       // disable inline base64
       assetsInlineLimit: 0,
-      // FIXME: esbuild.drop: ['console', 'debugger']
       minify: 'oxc',
       cssMinify: 'lightningcss',
-      rolldownOptions: { optimization: { inlineConst: true } },
+      reportCompressedSize: false,
+      rolldownOptions: {
+        experimental: { lazyBarrel: true },
+        optimization: { inlineConst: { mode: 'all', pass: 3 } },
+        output: { hashCharacters: 'hex' },
+        treeshake: { manualPureFunctions: ['console.log', 'console.info'] },
+      },
     },
 
     css: {
@@ -156,7 +161,7 @@ export default defineConfig(({ command }) => {
         },
       },
       modules: {
-        generateScopedName: '[hash:base64:8]',
+        generateScopedName: '[hash:hex:8]',
       },
     },
 
@@ -168,10 +173,6 @@ export default defineConfig(({ command }) => {
     // https://github.com/vitest-dev/vitest
     test: {
       environment: 'jsdom',
-    },
-
-    experimental: {
-      enableNativePlugin: true,
     },
   }
 })

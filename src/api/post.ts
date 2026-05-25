@@ -16,7 +16,7 @@ export type Post = z.infer<typeof postSchema>
  * 获取全部 Post
  * @returns
  */
-export async function getPostListAPI() {
+export async function getPostList() {
   return (
     await request.get<Post[]>('/posts', {
       responseSchema: postListSchema,
