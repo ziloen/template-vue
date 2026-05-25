@@ -8,10 +8,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { Post } from '~/api'
 import { API } from '~/api'
 const loading = ref(false)
-const allPosts = ref<Post[]>([])
+const allPosts = ref<API.Post[]>([])
 
 API.getPostList().then((p) => (allPosts.value = p))
 </script>

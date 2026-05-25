@@ -20,7 +20,6 @@ const router = createRouter({
 i18next.init({
   lng: 'en',
   ns: 'translation',
-  showSupportNotice: false,
   resources: { en: { translation: enJson } },
 })
 
