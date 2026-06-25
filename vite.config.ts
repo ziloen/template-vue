@@ -5,6 +5,7 @@ import legacy from '@vitejs/plugin-legacy'
 import Vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { Features } from 'lightningcss'
+import { resolve } from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import VueMacros from 'vue-macros/vite'
@@ -19,7 +20,10 @@ export default defineConfig(({ command }) => {
 
   return {
     resolve: {
-      tsconfigPaths: true,
+      alias: {
+        '~': resolve('src'),
+        '~cwd': process.cwd(),
+      },
     },
 
     define: {

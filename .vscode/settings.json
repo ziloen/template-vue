@@ -17,6 +17,9 @@
   "[vue]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
+  "cSpell.words": [
+    "vueuse"
+  ],
   // add @apply & @container to css atDirectives
   "css.customData": [
     ".vscode/css-data.json",
@@ -46,17 +49,15 @@
   "i18n-ally.localesPaths": "src/locales",
   "i18n-ally.sortKeys": true,
   "i18n-ally.sourceLanguage": "en",
-  "javascript.preferences.autoImportSpecifierExcludeRegexes": [
-    "^node:console$",
-  ],
-  "prettier.enable": false,
-  "tailwindCSS.experimental.configFile": "src/styles/tailwind.css",
+  "js/ts.experimental.useTsgo": false,
   // https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/#exclude-patterns-for-auto-imports10 
-  "typescript.preferences.autoImportSpecifierExcludeRegexes": [
+  "js/ts.preferences.autoImportSpecifierExcludeRegexes": [
     "^node:console$",
   ],
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
   // https://github.com/mrmckeb/typescript-plugin-css-modules?tab=readme-ov-file#visual-studio-code
   // ts css module plugin support
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "prettier.enable": false,
+  "tailwindCSS.experimental.configFile": "src/styles/tailwind.css"
 }

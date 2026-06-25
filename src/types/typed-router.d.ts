@@ -20,9 +20,9 @@ import type {
 
 declare module 'vue-router' {
   interface TypesConfig {
-    ParamParsers:
-      | never
+    _ParamParsers: {}
     RouteNamedMap: import('vue-router/auto-routes').RouteNamedMap
+    _RouteFileInfoMap: import('vue-router/auto-routes')._RouteFileInfoMap
   }
 }
 
@@ -105,17 +105,23 @@ declare module 'vue-router/auto-routes' {
         | '/'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/[...all].vue': {
       routes:
         | '/[...all]'
       views:
         | never
+      pathParamNames:
+        | 'all'
     }
     'src/pages/jsx/index.tsx': {
       routes:
         | '/jsx/'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'src/pages/jsx/fc.tsx': {
@@ -123,11 +129,15 @@ declare module 'vue-router/auto-routes' {
         | '/jsx/fc'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/jsx/setup.tsx': {
       routes:
         | '/jsx/setup'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'src/pages/jsx/sfc.vue': {
@@ -135,11 +145,15 @@ declare module 'vue-router/auto-routes' {
         | '/jsx/sfc'
       views:
         | never
+      pathParamNames:
+        | never
     }
     'src/pages/posts/index.vue': {
       routes:
         | '/posts/'
       views:
+        | never
+      pathParamNames:
         | never
     }
     'src/pages/posts/[id].vue': {
@@ -147,6 +161,8 @@ declare module 'vue-router/auto-routes' {
         | '/posts/[id]'
       views:
         | never
+      pathParamNames:
+        | 'id'
     }
   }
 
